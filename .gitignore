@@ -43,6 +43,7 @@ release/
 captured_*.txt
 history_*.json
 
+
 # Windows
 Thumbs.db
 ehthumbs.db
@@ -52,3 +53,6 @@ Desktop.ini
 *.tmp
 *.bak
 *.backup
+
+# Claude AI
+.claude/
