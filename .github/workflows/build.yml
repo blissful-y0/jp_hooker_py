@@ -52,6 +52,10 @@ jobs:
           --hidden-import psutil `
           advanced_hooker.py
 
+    - name: Create default settings file
+      run: |
+        echo '{"gemini_api_key": "", "auto_translate": false, "overlay_enabled": true, "target_language": "English", "overlay_position": null}' > settings.json
+
     - name: Build Overlay Text Hooker
       run: |
         pyinstaller --onefile --noconsole `
@@ -62,7 +66,6 @@ jobs:
           --hidden-import win32process `
           --hidden-import psutil `
           --hidden-import google.generativeai `
-          --add-data "settings.json;." `
           overlay_hooker.py
 
     - name: Create Release Directory

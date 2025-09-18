@@ -286,7 +286,14 @@ class OverlayTextHooker:
             'overlay_position': None
         }
 
-        if os.path.exists(self.settings_file):
+        # Create default settings file if it doesn't exist
+        if not os.path.exists(self.settings_file):
+            try:
+                with open(self.settings_file, 'w') as f:
+                    json.dump(self.settings, f, indent=2)
+            except:
+                pass
+        else:
             try:
                 with open(self.settings_file, 'r') as f:
                     saved = json.load(f)
