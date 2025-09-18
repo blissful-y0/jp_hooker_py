@@ -121,4 +121,4 @@ Pull Request 환영합니다!
 
 - 개인 사용 목적으로만 사용
 - 게임 EULA 확인 필요
-- API 키는 안전하게 보관
+- API 키는 안전하게 보관# jp_hooker_py
