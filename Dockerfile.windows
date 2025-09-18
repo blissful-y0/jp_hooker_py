@@ -1,0 +1,19 @@
+# Docker image for building Windows EXE from Mac/Linux
+FROM cdrx/pyinstaller-windows:python3
+
+# Set working directory
+WORKDIR /src
+
+# Copy requirements
+COPY requirements.txt .
+
+# Install Python packages
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt && \
+    pip install pyinstaller
+
+# Copy source files
+COPY *.py .
+COPY settings.json .
+
+# Build commands will be run via docker run
