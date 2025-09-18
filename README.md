@@ -59,24 +59,14 @@ python overlay_hooker.py
 
 ## 빌드 방법 🔨
 
-### Windows에서 빌드
-```batch
-build_onefile.bat
-```
-
-### Mac에서 Windows EXE 빌드
+### GitHub Actions로 자동 빌드
 ```bash
-# Apple Silicon (M1/M2/M3)
-./build_arm64_mac.sh
+# 1. GitHub에 코드 푸시
+./push_to_github.sh
 
-# Intel Mac
-./build_mac_to_windows.sh
+# 2. GitHub Actions에서 자동 빌드
+# 3. Actions → Artifacts에서 EXE 다운로드
 ```
-
-### GitHub Actions 자동 빌드
-1. 코드를 GitHub에 푸시
-2. Actions 탭에서 자동 빌드
-3. Artifacts에서 다운로드
 
 ## 기능 비교 📊
 
@@ -121,4 +111,4 @@ Pull Request 환영합니다!
 
 - 개인 사용 목적으로만 사용
 - 게임 EULA 확인 필요
-- API 키는 안전하게 보관# jp_hooker_py
+- API 키는 안전하게 보관
